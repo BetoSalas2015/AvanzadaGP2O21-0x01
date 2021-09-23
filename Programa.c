@@ -1,4 +1,4 @@
-//  Sesión 15 - 20/09/2021
+//  Sesión 17 - 23/09/2021
 
 #include "defs.h"
 #include <stdlib.h>				//  Para usar system()
@@ -115,6 +115,32 @@ int main()
 	a = 5; b = 8; c = 0;
 	PRINT1(d, a++ + b-- + !c--);
 	PRINT3(d, a, b, c);
+
+	//  Operador Dirección ( & ) - Unarios
+	a = 50;
+	ptr = &a;
+	printf("La dirección de memoria de la variable a es %p y guarda %d\n", &a, a);
+	printf("La dirección de memoria de la variable ptr es %p y guarda %p \n", &ptr, ptr);
+
+	//  OperadorIndirección ( * ) - Unarios
+	printf("El valor guardado en la dirección guardada en la variable ptr es: %d \n", *ptr);
+	*ptr = 60;
+	printf("El valor guardado en la dirección guardada en la variable ptr es: %d \n", *ptr);
+	printf("La dirección de memoria de la variable a es %p y guarda %d\n", &a, a);
+
+	//  Operador Tamaño de...  ( sizeof )
+	printf("El tipo de dato char ocupa %d bytes.\n", sizeof(char) );
+	printf("El tipo de dato int ocupa %d bytes.\n", sizeof(int) );
+	printf("El tipo de dato float ocupa %d bytes.\n", sizeof(float) );
+	printf("El tipo de dato double ocupa %d bytes.\n", sizeof(double) );
+	printf("El tipo de dato struct Persona ocupa %d bytes.\n", sizeof(struct Persona) );
+	printf("La variable Juanito ocupa %d bytes.\n", sizeof(Juanito) );
+	printf("La variable Arreglo double ocupa %d bytes.\n", sizeof(Arreglo) );
+
+	//  Operador Cast ( (tipo de dato) ) 
+
+	e = 3;
+	car = 3.0;
 
 	system("pause");			//  pausa en la consola
 	return 0;
