@@ -1,4 +1,5 @@
-//  Sesión 17 - 23/09/2021
+//   Sesión - 19 - 29/09/2021
+
 
 #include "defs.h"
 #include <stdlib.h>				//  Para usar system()
@@ -185,7 +186,7 @@ void aditivos()
 	// Resta  ( - )  - Binaria
 	PRINT1(d, 5 - 2);
 }
-int main()
+void desplazamiento() 
 {
 	//  Jerarquía Nivle 5: Operadores de Desplazamiento (Numeros Binarios)
 	//  Oerador desplazamiento a la izquierda ( << )
@@ -202,6 +203,65 @@ int main()
 	PRINT1(d, a >> 2);
 	PRINT1(d, a >> 3);
 	PRINT1(d, a >> 4);
+}
+void relacionales()
+{
+	//  Jerarquía nivel 6 - Operadores relacionales
+	PRINT1(d, 5 > 2);			//  Operador Mayor que ( > )
+	PRINT1(d, 5 >= 2);			//  Operador Mayor o igual que ( >= )
+	PRINT1(d, 5 < 2);			//  Operador Menor que ( < )
+	PRINT1(d, 5 <= 2);			//  Operador Menor o igual que ( <= )
+
+	a = 0;
+	PRINT1(d, !5 > a++);
+	a = 0;
+	PRINT1(d, !!5 > a++);
+	a = 0;
+	PRINT1(d, !!5 > ++a);
+}
+
+void igualdad()
+{
+	//  Jerarquía Nivel 7 - Operadores de Igualdad
+
+	//  Operador igual que ( == )
+	PRINT1(d, 5 == 2);
+
+	//  Operador NO igual que ( != )
+	PRINT1(d, 5 != 2);
+}
+void deBits()
+{
+	//  Jerarquía Nivel 8 - Operadores de Bits
+
+	//  Operado AND de bits ( & ) -  Binario
+	a = 13;
+	b = 26;
+	PRINT1(d, a & b);
+
+	a = 13;
+	b = 26;
+	PRINT1(d, a | b);
+
+	a = 13;
+	b = 26;
+	PRINT1(d, a ^ b);
+}
+int main()
+{
+	//  Jerarquía Nivel 9 - Operadores lógicos
+
+	//  Operado AND logico ( && ) 
+	a = 0;
+	b = 26;
+	PRINT1(d, a && b);
+	PRINT1(d, 0 && 26);
+
+	a = 0;
+	b = 26;
+	PRINT1(d, a || b);
+	PRINT1(d, 0 || 26);
+
 	
 	system("pause");			//  pausa en la consola
 	return 0;
