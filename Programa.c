@@ -49,7 +49,7 @@ void primarios()
 	printf("Nombre: %s\n",ptrJuanito->nombre);
 }
 
-int main()
+void unarios()
 {
 	// Jerarquía nivel 2 - Operadores Unarios
 	// Operador negación lógica ( ! )
@@ -122,7 +122,7 @@ int main()
 	printf("La dirección de memoria de la variable a es %p y guarda %d\n", &a, a);
 	printf("La dirección de memoria de la variable ptr es %p y guarda %p \n", &ptr, ptr);
 
-	//  OperadorIndirección ( * ) - Unarios
+	//  Operador Indirección ( * ) - Unarios
 	printf("El valor guardado en la dirección guardada en la variable ptr es: %d \n", *ptr);
 	*ptr = 60;
 	printf("El valor guardado en la dirección guardada en la variable ptr es: %d \n", *ptr);
@@ -140,8 +140,69 @@ int main()
 	//  Operador Cast ( (tipo de dato) ) 
 
 	e = 3;
-	car = 3.0;
+	car = 50.0;
+	PRINT1(f, e);
+	PRINT1(c, car);
+	// Promocion de tipos:
 
+	a = car;		//  char = int
+	f = a;			//  int => float
+	h = f;			//  float  => double
+	f = h;			//	pérdida de información
+	// Conversión explicita
+	a = (int) car;	
+	f = (float) a;			// int => float;
+	h = (double) f;			//  float  => double
+	f = (float) h;			//	pérdida de información
+
+	h = (double) car;		//  char => float
+}
+
+void multiplicativos()
+{
+	//  Jearquía nivel 3: Operadores multiplicativos
+	//  Multiplicación ( * )  - Binaria
+	PRINT1(d, 500 * 350);
+
+	//  División  ( / )
+	PRINT1(d, 5 / 2);		//   División entera: entero / entero = entero
+	PRINT1(f, 5.0 / 2);
+	PRINT1(f, 5 / 2.0);
+	PRINT1(7.3f, 5.0 / 2.0);
+
+	PRINT1(f, 5 / 9 * (80 - 32));		//  ERROR!   División entera
+	PRINT1(f, 5.0 / 9.0 * (80 - 32));
+
+	//  Módulo o Residuo de la división ( % )
+	printf("5 %% 2 = %d \n", 5 % 2);
+}
+void aditivos() 
+{
+	//  Jerarquía nivel 4 - Operadores Aditivos
+	// Suma  ( + )  - Binaria
+	PRINT1(d, 5 + 2);
+	
+	// Resta  ( - )  - Binaria
+	PRINT1(d, 5 - 2);
+}
+int main()
+{
+	//  Jerarquía Nivle 5: Operadores de Desplazamiento (Numeros Binarios)
+	//  Oerador desplazamiento a la izquierda ( << )
+	a = 53;
+	PRINT1(d, a);
+	PRINT1(d, a << 1);
+	PRINT1(d, a << 2);
+	PRINT1(d, a << 3);
+
+		//  Oerador desplazamiento a la izquierda ( << )
+	a = 424;
+	PRINT1(d, a);
+	PRINT1(d, a >> 1);
+	PRINT1(d, a >> 2);
+	PRINT1(d, a >> 3);
+	PRINT1(d, a >> 4);
+	
 	system("pause");			//  pausa en la consola
 	return 0;
 }
