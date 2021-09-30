@@ -1,4 +1,4 @@
-//   Sesión - 19 - 29/09/2021
+//   Sesión - 20 - 30/09/2021
 
 
 #include "defs.h"
@@ -232,36 +232,113 @@ void igualdad()
 }
 void deBits()
 {
-	//  Jerarquía Nivel 8 - Operadores de Bits
+	//   Operadores de Bits
 
+	//  Jerarquía Nivel 8 - Operadores de Bits
 	//  Operado AND de bits ( & ) -  Binario
 	a = 13;
 	b = 26;
 	PRINT1(d, a & b);
 
+	//  Jerarquía Nivel 9 - Operadores de Bits
+	//  Operado OR de bits ( | ) -  Binario
 	a = 13;
 	b = 26;
 	PRINT1(d, a | b);
 
+	//  Jerarquía Nivel 10 - Operadores de Bits
+	//  Operado XOR de bits ( ^ ) -  Binario
 	a = 13;
 	b = 26;
 	PRINT1(d, a ^ b);
 }
-int main()
+void logicos()
 {
-	//  Jerarquía Nivel 9 - Operadores lógicos
+	//  Jerarquía Nivel 11 - Operadores lógicos
 
 	//  Operado AND logico ( && ) 
 	a = 0;
 	b = 26;
 	PRINT1(d, a && b);
 	PRINT1(d, 0 && 26);
+	//  Jerarquía Nivel 12 - Operadores lógicos
 
+	//  Operado OR logico ( || ) 
 	a = 0;
 	b = 26;
 	PRINT1(d, a || b);
 	PRINT1(d, 0 || 26);
 
+}
+void condicional()
+{
+//  Jerarquía Nivel 13 - Operador Condicional
+	//  Operador condicional ( ? : )
+	a = 20;
+	b = 10;
+	PRINT2(d, a, b);
+	(a < b) ? PRINT1(d, a) : PRINT1(d, b);
+
+	a = 10;
+	b = 20;
+	PRINT2(d, a, b);
+	(a < b) ? PRINT1(d, a) : PRINT1(d, b);
+}
+void asignación()
+{
+//  Jerarquía Nivel 13 - Operadores de asignación
+	// Operador ASignación Simple ( = )
+	PRINT1(d, a = 20);
+
+	//  Asignación múltiple ( = )
+	a = b = c = d = 0;
+	PRINT4(d, a, b, c, d);
+
+	//  Asignación compuesta
+	a = 10;
+	PRINT1(d, a += 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a -= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a *= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a /= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a %= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a <<= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a >>= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a |= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a &= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a ^= 5);
+	PRINT1(d, a);
+}
+int main()
+{
+	// Operador coma ( , )
+	PRINT4(d, a, b, c, d);
 	
 	system("pause");			//  pausa en la consola
 	return 0;
