@@ -1,4 +1,4 @@
-//   Sesión - 21 - 04/10/2021
+//   Sesión - 22 - 06/10/2021
 
 
 #include "defs.h"
@@ -351,24 +351,38 @@ int main()
 	PRINT1(d, a+=2*a*++b);
 	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
 
-	a = 3; b = 3; c = 0; d = -1; e = 3; f = 2;
 	PRINT1(d, b+=b+b++);
 	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
 
-	a = 3; b = 3; c = 0; d = -1; e = 3; f = 2;
 	PRINT1(f, e/=d+d*a);
 	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
 
-	a = 3; b = 3; c = 0; d = -1; e = 3; f = 2;
 	PRINT1(d, !a+!b+(c&&d));
 	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
 
-	a = 3; b = 3; c = 0; d = -1; e = 3; f = 2;
 	PRINT1(d, d=(a||b)&&(c||(d&&!f)));
 	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
 
-	a = 3; b = 3; c = 0; d = -1; e = 3; f = 2;
 	PRINT1(d, a%b*c-d++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
+
+	PRINT1(d, d=d?d--:d++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
+
+	PRINT1(d, d=d?d--:++d);
+	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
+	//-------------------------------------------
+
+	a = -1; b = 3; c = 0; d = -1; e = 3; f = 2;
+	PRINT1(d, a++ && b++ || c++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
+
+	a = 0; b = 0; c = 0; d = 0; e = 3; f = 2;
+	PRINT1(d, a++ && b++ || c++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
+
+	a = 0; b = 0; c = 0; d = 0; e = 3; f = 2;
+	PRINT1(d, a++ && b++ || c++);
 	PRINT4(d, a, b, c, d); PRINT2(f, e,f); NL;
 	
 	system("pause");			//  pausa en la consola
